@@ -78,4 +78,5 @@ def google_lookup():
     return render_template('google_lookup.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    from waitress import serve
+    serve(app, listen='0.0.0.0:5003')

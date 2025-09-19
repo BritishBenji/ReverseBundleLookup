@@ -1,0 +1,11 @@
+services:
+  debrief_host:
+    build: .
+    container_name: reverse_bundle_id_lookup
+    ports:
+      - "5003:5003"
+    volumes:
+      # This volume mounts the entire current directory to /app
+      # This should make your local changes visible inside the container
+      - .:/app
+    restart: unless-stopped
