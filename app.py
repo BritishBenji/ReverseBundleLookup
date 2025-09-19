@@ -55,7 +55,7 @@ def google_lookup():
         bundle_id = request.form['bundle_id']
         try:
             # Use the google-play-scraper library to get app info
-            app_info = google_app_scraper(bundle_id, lang='en', country='us')
+            app_info = google_app_scraper(bundle_id.lower(), lang='en', country='us')
             
             # Extract and prepare the data from the scraper result
             return render_template(
@@ -79,4 +79,4 @@ def google_lookup():
 
 if __name__ == '__main__':
     from waitress import serve
-    serve(app, listen='0.0.0.0:5003')
+    serve(app, listen='0.0.0.0:5005')
