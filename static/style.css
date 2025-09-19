@@ -1,0 +1,141 @@
+/* Catppuccin Macchiato Theme */
+:root {
+--ctp-rosewater: #f4dbd6;
+--ctp-flamingo: #f0c6c6;
+--ctp-pink: #f5bde6;
+--ctp-mauve: #c6a0f6;
+--ctp-red: #ee99a0;
+--ctp-maroon: #e58e99;
+--ctp-peach: #f5a97f;
+--ctp-yellow: #eed49f;
+--ctp-green: #a6da95;
+--ctp-teal: #8bd5ca;
+--ctp-sky: #93b9e5;
+--ctp-sapphire: #7dc4e4;
+--ctp-blue: #8caaee;
+--ctp-lavender: #b7bdf8;
+--ctp-text: #cad3f5;
+--ctp-subtext1: #b8c0e0;
+--ctp-subtext0: #a5adcb;
+--ctp-overlay2: #939ab7;
+--ctp-overlay1: #838ba7;
+--ctp-overlay0: #6e738d;
+--ctp-surface2: #5b6078;
+--ctp-surface1: #494d64;
+--ctp-surface0: #363a4f;
+--ctp-base: #24273a;
+--ctp-mantle: #1e2030;
+--ctp-crust: #181926;
+}
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+background-color: var(--ctp-mantle);
+color: var(--ctp-text);
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+margin: 0;
+padding: 20px;
+}
+.container {
+background-color: var(--ctp-crust);
+padding: 2rem;
+border-radius: 12px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+max-width: 600px;
+width: 100%;
+text-align: center;
+}
+h1 {
+color: var(--ctp-sapphire);
+margin-bottom: 1rem;
+}
+form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+margin-bottom: 2rem;
+}
+input[type="text"] {
+padding: 0.75rem;
+border: 1px solid var(--ctp-surface2);
+background-color: var(--ctp-base);
+color: var(--ctp-text);
+border-radius: 8px;
+font-size: 1rem;
+width: 100%;
+box-sizing: border-box;
+}
+input[type="text"]::placeholder {
+color: var(--ctp-subtext0);
+}
+button {
+background-color: var(--ctp-sapphire);
+color: var(--ctp-crust);
+border: none;
+padding: 0.75rem;
+border-radius: 8px;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+button:hover {
+background-color: var(--ctp-blue);
+}
+.app-info {
+text-align: left;
+padding-top: 1rem;
+border-top: 1px solid var(--ctp-surface1);
+}
+.app-info-header {
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-bottom: 1rem;
+}
+.app-icon {
+width: 90px;
+height: 90px;
+border-radius: 18px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.app-details {
+display: flex;
+flex-direction: column;
+}
+.app-details h2 {
+margin: 0;
+font-size: 1.5rem;
+color: var(--ctp-text);
+}
+.app-details p {
+margin: 0;
+color: var(--ctp-subtext1);
+}
+.app-details .price {
+font-weight: bold;
+color: var(--ctp-green);
+}
+.app-details a {
+color: var(--ctp-sapphire);
+text-decoration: none;
+font-weight: 500;
+}
+.app-details a:hover {
+text-decoration: underline;
+}
+.description-box {
+background-color: var(--ctp-surface0);
+padding: 1rem;
+border-radius: 8px;
+margin-top: 1rem;
+font-size: 0.9rem;
+white-space: pre-wrap;
+text-align: justify;
+}
+.error {
+color: var(--ctp-red);
+font-weight: bold;
+}

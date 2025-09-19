@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App Store Lookup</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<div class="container">
+<h1>App Store Bundle ID Lookup</h1>
+<form method="post" action="/">
+<input type="text" name="bundle_id" placeholder="e.g., com.facebook.Facebook" required>
+<button type="submit">Search</button>
+</form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if app_name %}
+        <div class="app-info">
+            <div class="app-info-header">
+                <img class="app-icon" src="{{ artwork }}" alt="{{ app_name }} Icon">
+                <div class="app-details">
+                    <h2>{{ app_name }}</h2>
+                    <p>{{ developer }}</p>
+                    <p class="price">{{ price }}</p>
+                    <p><a href="{{ app_url }}" target="_blank">View on App Store</a></p>
+                </div>
+            </div>
+            <h3>Description</h3>
+            <div class="description-box">
+                <p>{{ description }}</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
