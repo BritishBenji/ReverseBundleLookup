@@ -14,8 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose the port the app will run on
-EXPOSE 5001
+EXPOSE 5003
 
 # Command to run the application using Waitress
 # This is the correct way to run a production server.
-CMD ["waitress-serve", "--listen=0.0.0.0:5001", "app:app"]
+CMD ["waitress-serve", "--listen=0.0.0.0:5003", "app:app"]
