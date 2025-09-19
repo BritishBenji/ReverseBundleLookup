@@ -139,3 +139,25 @@ text-align: justify;
 color: var(--ctp-red);
 font-weight: bold;
 }
+/* New styles for the landing page */
+.landing-links {
+display: flex;
+gap: 1.5rem;
+justify-content: center;
+margin-top: 2rem;
+}
+.landing-links .button {
+background-color: var(--ctp-sapphire);
+color: var(--ctp-crust);
+border: none;
+padding: 1rem 1.5rem;
+border-radius: 8px;
+font-size: 1.1rem;
+font-weight: bold;
+text-decoration: none;
+transition: background-color 0.2s ease;
+min-width: 180px;
+}
+.landing-links .button:hover {
+background-color: var(--ctp-blue);
+}

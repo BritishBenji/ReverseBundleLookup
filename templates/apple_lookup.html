@@ -4,14 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>App Store Lookup</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Apple App Store Lookup</title>
 <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 <div class="container">
-<h1>App Store Bundle ID Lookup</h1>
-<form method="post" action="/">
+<h1>Apple App Store Lookup</h1>
+<form method="post" action="{{ url_for('apple_lookup') }}">
 <input type="text" name="bundle_id" placeholder="e.g., com.facebook.Facebook" required>
 <button type="submit">Search</button>
 </form>
